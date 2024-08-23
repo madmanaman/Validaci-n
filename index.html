@@ -176,7 +176,7 @@
             </nav>
     </header>
     <main>
-        <div class="ps-5 mt-4" id="textEstado">
+        <div class="ps-5 m-4" id="textEstado">
         </div>
       
         <small class="error-message" style="color: red; display: none"
@@ -184,22 +184,22 @@
         >
       </div>
 
-      <form id="dataForm" >
+      <form id="dataForm" class="container" >
         <div class="menu row g-1">
           <div class="form-group hidden" id="key-group">
             <label for="key">Key</label>
             <input type="text" id="key" name="key" />
           </div>
 
-          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+          <div class="form-group col-md-3 col-sm-4 p-1">
             <label for="rut" class="form-label">RUT</label>
             <input is="input-rut" class="form-control" id="rut" name="rut" required />          
           </div>
-          <div class="form-group col-lg-2 col-md-3 col-sm-4 ">
+          <div class="form-group col-md-3 col-sm-4 p-1">
             <label for="n-credito"class="form-label">N° CRÉDITO (OP)</label>
-            <input type="number" class="form-control"id="n-credito" name="n-credito" required />
+            <input type="number" class="form-control" id="n-credito" name="n-credito" required />
           </div>
-          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+          <div class="form-group col-md-3 col-sm-4 p-1">
             <label for="canal" class="form-label"></label>CANAL</label>
             <select class="form-select mt-2" aria-label="Default select example" id="canal" name="CANAL"  required>
               <option value=""></option>
@@ -207,10 +207,10 @@
               <option value="EUROCAPITAL">EUROCAPITAL</option>
             </select>
           </div>
-          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+          <div class="form-group col-md-3 col-sm-4 p-1">
             <label for="tipoNegocio" class="form-label">TIPO NEGOCIO</label>
             <select id="tipoNegocio" name="tipoNegocio" class="form-select" aria-label="Default select example"required>
-              <option value="" disabled selected></option>
+              <option value=""></option>
               <option value="DEPENDIENTE">DEPENDIENTE</option>
               <option value="INDEPENDIENTE">INDEPENDIENTE</option>
               <option value="EMPRESA">EMPRESA</option>
@@ -221,7 +221,7 @@
               <option value="MI OFERTA">MI OFERTA</option>
             </select>
           </div>
-          <div class="form-group col-lg-2 col-md-3 col-sm-4 ">
+          <div class="form-group col-md-3 col-sm-4 p-1">
             <label for="telefono" class="form-label">TELÉFONO</label>
             <input
               type="number"
@@ -232,8 +232,8 @@
               required
             />
           </div>
-          <div class="form-group col-lg-2 col-md-3 col-sm-4 ">
-            <label for="referencias" class="form-label">REFERENCIAS:</label>
+          <div class="form-group col-md-3 col-sm-4 p-1">
+            <label for="referencias" class="form-label">REFERENCIAS</label>
             <select type="text" id="referencias" name="referencias" class="form-select" aria-label="Default select example">
               <option value="REFERENCIAS">REFERENCIAS</option>
               <option value="N/A">N/A</option>
@@ -242,14 +242,13 @@
               <option value="EXCEPCIONADO">EXCEPCIONADO</option>
             </select>
           </div>
-
-          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+          <div class="form-group col-md-3 col-sm-4 p-1">
             <label for="estado-actual">ESTADO ACTUAL</label>
             <select
               type="text"
               id="estado-actual"
               name="estado-actual"
-              class="form-select" aria-label="Default select example"
+              class="form-select mt-2" aria-label="Default select example"
               onchange="cambiarEstadoH1()"
               required
             >
@@ -259,19 +258,18 @@
               <option value="RECHAZADO">RECHAZADO</option>
             </select>
           </div>
-          <div class="form-group">
+          <div class="form-group col-md-3 col-sm-4 p-1">
             <label for="vehiculo">VEHÍCULO</label>
-            <select id="vehiculo" name="vehiculo">
+            <select id="vehiculo" name="vehiculo" class="form-select mt-2" aria-label="Default select example">
               <option value="VEHÍCULO">VEHÍCULO</option>
               <option value="PENDIENTE">PENDIENTE</option>
               <option value="NUEVO">NUEVO</option>
               <option value="USADO">USADO</option>
             </select>
           </div>
-
-          <div class="form-group" id="dpa-titular-group">
+          <div class="form-group col-md-3 col-sm-4 p-1" id="dpa-titular-group">
             <label for="dpa-titular">DPA TITULAR</label>
-            <select type="text" id="dpa-titular" name="dpa-titular" required>
+            <select type="text" id="dpa-titular" name="dpa-titular" class="form-select mt-2" aria-label="Default select example" required>
               <option value="DPA TITULAR">DPA TITULAR</option>
               <option value="N/A">N/A</option>
               <option value="PENDIENTE">PENDIENTE</option>
@@ -279,13 +277,13 @@
               <option value="DPA POSITIVO">DPA POSITIVO</option>
             </select>
           </div>
-
-          <div class="form-group" id="dpa-dueno-vehiculo-group">
+          <div class="form-group col-md-3 col-sm-4 p-1" id="dpa-dueno-vehiculo-group">
             <label for="dpa-dueno-vehiculo">DPA DUEÑO VEHICULO</label>
             <select
               type="text"
               id="dpa-dueno-vehiculo"
               name="dpa-dueno-vehiculo"
+              class="form-select mt-2" aria-label="Default select example"
             >
               <option value="DPA DUEÑO VEHICULO">DPA DUEÑO VEHICULO</option>
               <option value="N/A">N/A</option>
@@ -294,32 +292,34 @@
               <option value="DPA POSITIVO">DPA POSITIVO</option>
             </select>
           </div>
-
-          <div class="form-group">
-            <label for="domicilio">DOMICILIO</label>
-            <input type="text" id="domicilio" name="domicilio" />
+          <div class="form-group col-md-6 col-sm-6 p-1">
+            <label for="domicilio" class="form-label">DOMICILIO</label>
+            <input type="text" id="domicilio" name="domicilio" class="form-control"/>
           </div>
-          <div class="form-group">
-            <label for="comuna">COMUNA:</label>
-            <input list="comunas" id="comuna" name="comuna" />
+          <!-- comuna debe ser un select, debido a que son muchas la mejor opcion es darle un array -->
+          <div class="form-group col-md-3 col-sm-4 p-1">
+            <label for="comuna" class="form-label">COMUNA:</label>
+            <input list="comunas" id="comuna" name="comuna" class="form-control"/>
             <datalist id="comunas"> </datalist>
           </div>
-          <div class="form-group">
-            <label for="correo">CORREO</label>
-            <input type="email" id="correo" name="correo" />
+
+          <div class="form-group col-md-3 col-sm-4 p-1">
+            <label for="correo" class="form-label">CORREO</label>
+            <input type="email" id="correo" name="correo" class="form-control"/>
           </div>
 
-          <div class="form-group">
-            <label for="referencias-detalle">REFERENCIAS (DETALLE)</label>
+          <div class="form-group col-md-6 col-sm-6 p-1">
+            <label for="referencias-detalle" class="form-label">REFERENCIAS (DETALLE)</label>
             <textarea
               id="referencias-detalle"
               name="referencias-detalle"
+              class="form-control"
             ></textarea>
           </div>
 
-          <div class="form-group">
-            <label for="comentarios">COMENTARIOS</label>
-            <textarea id="comentarios" name="comentarios"></textarea>
+          <div class="form-group col-md-6 col-sm-6 p-1">
+            <label for="comentarios" class="form-label" >COMENTARIOS</label>
+            <textarea id="comentarios" name="comentarios" class="form-control"></textarea>
           </div>
         </div>
         <div class="otros">
