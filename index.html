@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary bg-gradient rounded">
+            <div class="container-fluid">
+          <h1 class="navbar-brand text-white" >Formulario Validación</h1>
+          <div  class="input-group m-2 w-25">
+            <label class="input-group-text" for="validador">VALIDADOR:</label>
+            <select class="form-select" id="elValidador" name="elValidador" required>
+              <option value=""></option>
+              <option value="NATALIA MOLINA">NATALIA MOLINA</option>
+              <option value="PATRICIA OSSES">PATRICIA OSSES</option>
+              <option value="WLADIMIR GOMEZ">WLADIMIR GOMEZ</option>
+              <option value="FERNANDO CELIS">FERNANDO CELIS</option>
+            </select>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Seleccionar opciones
+          </button>
+          <ul class="dropdown-menu bg-secondary bg-gradient" aria-labelledby="dropdownMenuButton">
+              <li>
+                  <div class="form-check ms-3">
+                      <input class="form-check-input" type="checkbox" value="CEDULA" name="options" onchange="toggleVisibility('cedula-group')">
+                      <label class="form-check-label text-white" for="checkbox1" >
+                        CEDULA
+                      </label>
+                  </div>
+              </li>
+              <li>
+                  <div class="form-check ms-3">
+                      <input class="form-check-input" type="checkbox" value="UNION CIVIL" name="options" id="checkbox" onchange="toggleVisibility('unionCivil-group')">
+                      <label class="form-check-label text-white" for="checkbox2">
+                        UNION CIVIL
+                      </label>
+                  </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="LIQUIDACIONES" name="options" id="checkbox" onchange="toggleVisibility('liquidaciones-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        LIQUIDACIONES
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="INGRESOS" name="options" id="checkbox" onchange="toggleVisibility('ingresos-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        INGRESOS M$
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="CERTIFICADO COTIZACIONES" name="options" id="checkbox" onchange="toggleVisibility('cotizaciones-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        CERTIFICADO COTIZACIONES
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="CARPETA TRIBUTARIA" name="options" id="checkbox" onchange="toggleVisibility('carpeta-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        CARPETA TRIBUTARIA
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="INFORME LEGAL" name="options" id="checkbox" onchange="toggleVisibility('informe-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        INFORME LEGAL
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="ROL" name="options" id="checkbox" onchange="toggleVisibility('rol-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        ROL
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="MINUTAS" name="options" id="checkbox" onchange="toggleVisibility('minutas-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        MINUTAS
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="CAV" name="options" id="checkbox" onchange="toggleVisibility('cav-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        CAV
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="BBHH" name="options" id="checkbox" onchange="toggleVisibility('bbhh-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        BBHH
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="FOTOS/BIOMETRICO" name="options" id="checkbox" onchange="toggleVisibility('fotos-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        FOTOS/BIOMETRICO
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="ACREDITACIÓN PIE" name="options" id="checkbox" onchange="toggleVisibility('pie-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        ACREDITACIÓN PIE
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="GEORREFERENCIA" name="options" id="checkbox" onchange="toggleVisibility('geo-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        GEORREFERENCIA
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="ACREDITA VÍNCULO" name="options" id="checkbox" onchange="toggleVisibility('vinculo-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        ACREDITA VÍNCULO
+                    </label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="checkbox" value="PAGO MORA" name="options" id="checkbox" onchange="toggleVisibility('mora-group')"
+                    >
+                    <label class="form-check-label text-white" for="checkbox2">
+                        PAGO MORA
+                    </label>
+                </div>
+              </li>
+          </ul>
+      </div>
+            </nav>
+    </header>
+    <main>
+        <div class="ps-5 mt-4" id="textEstado">
+        </div>
+      
+        <small class="error-message" style="color: red; display: none"
+          >Este campo es obligatorio.</small
+        >
+      </div>
+
+      <form id="dataForm" >
+        <div class="menu row g-1">
+          <div class="form-group hidden" id="key-group">
+            <label for="key">Key</label>
+            <input type="text" id="key" name="key" />
+          </div>
+
+          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+            <label for="rut" class="form-label">RUT</label>
+            <input is="input-rut" class="form-control" id="rut" name="rut" required />          
+          </div>
+          <div class="form-group col-lg-2 col-md-3 col-sm-4 ">
+            <label for="n-credito"class="form-label">N° CRÉDITO (OP)</label>
+            <input type="number" class="form-control"id="n-credito" name="n-credito" required />
+          </div>
+          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+            <label for="canal" class="form-label"></label>CANAL</label>
+            <select class="form-select mt-2" aria-label="Default select example" id="canal" name="CANAL"  required>
+              <option value=""></option>
+              <option value="AMICAR">AMICAR</option>
+              <option value="EUROCAPITAL">EUROCAPITAL</option>
+            </select>
+          </div>
+          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+            <label for="tipoNegocio" class="form-label">TIPO NEGOCIO</label>
+            <select id="tipoNegocio" name="tipoNegocio" class="form-select" aria-label="Default select example"required>
+              <option value="" disabled selected></option>
+              <option value="DEPENDIENTE">DEPENDIENTE</option>
+              <option value="INDEPENDIENTE">INDEPENDIENTE</option>
+              <option value="EMPRESA">EMPRESA</option>
+              <option value="INMEDIATO">INMEDIATO</option>
+              <option value="WEB">WEB</option>
+              <option value="APELACIÓN">APELACIÓN</option>
+              <option value="REESTRUCTURACIÓN">REESTRUCTURACIÓN</option>
+              <option value="MI OFERTA">MI OFERTA</option>
+            </select>
+          </div>
+          <div class="form-group col-lg-2 col-md-3 col-sm-4 ">
+            <label for="telefono" class="form-label">TELÉFONO</label>
+            <input
+              type="number"
+              class="form-control"
+              id="telefono"
+              name="telefono"
+              value="0"
+              required
+            />
+          </div>
+          <div class="form-group col-lg-2 col-md-3 col-sm-4 ">
+            <label for="referencias" class="form-label">REFERENCIAS:</label>
+            <select type="text" id="referencias" name="referencias" class="form-select" aria-label="Default select example">
+              <option value="REFERENCIAS">REFERENCIAS</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group col-lg-2 col-md-3 col-sm-4">
+            <label for="estado-actual">ESTADO ACTUAL</label>
+            <select
+              type="text"
+              id="estado-actual"
+              name="estado-actual"
+              class="form-select" aria-label="Default select example"
+              onchange="cambiarEstadoH1()"
+              required
+            >
+              <option value=""></option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="RECHAZADO">RECHAZADO</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="vehiculo">VEHÍCULO</label>
+            <select id="vehiculo" name="vehiculo">
+              <option value="VEHÍCULO">VEHÍCULO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="NUEVO">NUEVO</option>
+              <option value="USADO">USADO</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="dpa-titular-group">
+            <label for="dpa-titular">DPA TITULAR</label>
+            <select type="text" id="dpa-titular" name="dpa-titular" required>
+              <option value="DPA TITULAR">DPA TITULAR</option>
+              <option value="N/A">N/A</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="DPA NEGATIVO">DPA NEGATIVO</option>
+              <option value="DPA POSITIVO">DPA POSITIVO</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="dpa-dueno-vehiculo-group">
+            <label for="dpa-dueno-vehiculo">DPA DUEÑO VEHICULO</label>
+            <select
+              type="text"
+              id="dpa-dueno-vehiculo"
+              name="dpa-dueno-vehiculo"
+            >
+              <option value="DPA DUEÑO VEHICULO">DPA DUEÑO VEHICULO</option>
+              <option value="N/A">N/A</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="DPA NEGATIVO">DPA NEGATIVO</option>
+              <option value="DPA POSITIVO">DPA POSITIVO</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="domicilio">DOMICILIO</label>
+            <input type="text" id="domicilio" name="domicilio" />
+          </div>
+          <div class="form-group">
+            <label for="comuna">COMUNA:</label>
+            <input list="comunas" id="comuna" name="comuna" />
+            <datalist id="comunas"> </datalist>
+          </div>
+          <div class="form-group">
+            <label for="correo">CORREO</label>
+            <input type="email" id="correo" name="correo" />
+          </div>
+
+          <div class="form-group">
+            <label for="referencias-detalle">REFERENCIAS (DETALLE)</label>
+            <textarea
+              id="referencias-detalle"
+              name="referencias-detalle"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="comentarios">COMENTARIOS</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+          </div>
+        </div>
+        <div class="otros">
+          <div class="form-group hidden" id="cedula-group">
+            <label for="cedula">CEDULA</label>
+            <select id="cedula" name="CEDULA">
+              <option value="CEDULA">CEDULA</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="unionCivil-group">
+            <label for="union-civil">UNIÓN CIVIL</label>
+            <select id="union-civil" name="UNIÓN CIVIL" required>
+              <option value="UNIÓN CIVIL">UNIÓN CIVIL</option>
+              <option value="N/A">N/A</option>
+              <option value="NO">NO</option>
+              <option value="SI">SI</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="liquidaciones-group">
+            <label for="liquidaciones">LIQUIDACIONES</label>
+            <select id="liquidaciones" name="LIQUIDACIONES">
+              <option value="LIQUIDACIONES">LIQUIDACIONES</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="cotizaciones-group">
+            <label for="certificado-cotizaciones"
+              >CERTIFICADO COTIZACIONES</label
+            >
+            <select
+              id="certificado-cotizaciones"
+              name="CERTIFICADO COTIZACIONES"
+            >
+              <option value="CERTIFICADO COTIZACIONES">
+                CERTIFICADO COTIZACIONES
+              </option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="carpeta-group">
+            <label for="carpeta-tributaria">CARPETA TRIBUTARIA</label>
+            <select
+              type="text"
+              id="carpeta-tributaria"
+              name="carpeta-tributaria"
+            >
+              <option value="CARPETA TRIBUTARIA">CARPETA TRIBUTARIA</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="ingresos-group">
+            <label for="ingresos">INGRESOS x M$</label>
+            <input type="number" id="ingresos" name="ingresos" />
+          </div>
+
+          <div class="form-group hidden" id="informe-group">
+            <label for="informe-legal">INFORME LEGAL</label>
+            <select type="text" id="informe-legal" name="informe-legal">
+              <option value="INFORME LEGAL">INFORME LEGAL</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="rol-group">
+            <label for="rol">ROL</label>
+            <select type="text" id="rol" name="rol">
+              <option value="ROL">ROL</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="minutas-group">
+            <label for="minutas">MINUTAS</label>
+            <select type="text" id="minutas" name="minutas">
+              <option value="MINUTAS">MINUTAS</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="cav-group">
+            <label for="cav">CAV</label>
+            <select type="text" id="cav" name="cav">
+              <option value="CAV">CAV</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="bbhh-group">
+            <label for="bbhh">BBHH</label>
+            <select type="text" id="bbhh" name="bbhh">
+              <option value="BBHH">BBHH</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="fotos-group">
+            <label for="fotos">FOTOS</label>
+            <select type="text" id="fotos" name="fotos">
+              <option value="FOTOS">FOTOS</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="pie-group">
+            <label for="acreditacion-pie">ACREDITACIÓN PIE</label>
+            <select type="text" id="acreditacion-pie" name="acreditacion-pie">
+              <option value="ACREDITACIÓN PIE">ACREDITACIÓN PIE</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="geo-group">
+            <label for="georreferencia">GEORREFERENCIA</label>
+            <select type="text" id="georreferencia" name="georreferencia">
+              <option value="GEORREFERENCIA">GEORREFERENCIA</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="vinculo-group">
+            <label for="acredita-vinculo">ACREDITA VÍNCULO</label>
+            <select type="text" id="acredita-vinculo" name="acredita-vinculo">
+              <option value="ACREDITA VÍNCULO">ACREDITA VÍNCULO</option>
+              <option value="N/A">N/A</option>
+              <option value="VALIDADO">VALIDADO</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="EXCEPCIONADO">EXCEPCIONADO</option>
+            </select>
+          </div>
+
+          <div class="form-group hidden" id="mora-group">
+            <label for="pago-mora">PAGO MORA</label>
+            <input list="pago-mora-options" id="pago-mora" name="pago-mora" />
+            <datalist id="pago-mora-options" placeholder="N/A">
+              <option value="PAGO MORA"></option>
+              <option value="N/A"></option>
+              <option value="VALIDADO"></option>
+              <option value="PENDIENTE"></option>
+              <option value="EXCEPCIONADO"></option>
+            </datalist>
+          </div>
+
+          <div class="form-group hidden" id="fecha-group">
+            <label for="fecha">FECHA</label>
+            <input type="text" id="fecha" name="fecha" />
+          </div>
+          <div class="form-group hidden">
+            <label for="rut-socio1">1-RUT SOCIO O PARA</label>
+            <input
+              type="text"
+              id="rut-socio1"
+              name="rut-socio1"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="cedula-socio1">1-CEDULA SOCIO O PARA</label>
+            <input
+              type="text"
+              id="cedula-socio1"
+              name="cedula-socio1"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="domicilio-socio1">1-DOMICILIO SOCIO</label>
+            <input
+              type="text"
+              id="domicilio-socio1"
+              name="domicilio-socio1"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="comuna-socio1">1-COMUNA</label>
+            <input type="text" id="comuna-socio1" name="comuna-socio1" />
+          </div>
+
+          <div class="form-group hidden">
+            <label for="rut-socio2">2-RUT SOCIO O PARA</label>
+            <input
+              type="text"
+              id="rut-socio2"
+              name="rut-socio2"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="cedula-socio2">2-CEDULA SOCIO O PARA</label>
+            <input
+              type="text"
+              id="cedula-socio2"
+              name="cedula-socio2"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="domicilio-socio2">2-DOMICILIO SOCIO</label>
+            <input
+              type="text"
+              id="domicilio-socio2"
+              name="domicilio-socio2"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="comuna-socio2">2-COMUNA</label>
+            <input type="text" id="comuna-socio2" name="comuna-socio2" />
+          </div>
+
+          <div class="form-group hidden">
+            <label for="rut-socio3">3-RUT SOCIO O PARA</label>
+            <input
+              type="text"
+              id="rut-socio3"
+              name="rut-socio3"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="cedula-socio3">3-CEDULA SOCIO O PARA</label>
+            <input
+              type="text"
+              id="cedula-socio3"
+              name="cedula-socio3"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="domicilio-socio3">3-DOMICILIO SOCIO</label>
+            <input
+              type="text"
+              id="domicilio-socio3"
+              name="domicilio-socio3"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="comuna-socio3">3-COMUNA</label>
+            <input type="text" id="comuna-socio3" name="comuna-socio3" />
+          </div>
+
+          <div class="form-group hidden">
+            <label for="rut-socio4">4-RUT SOCIO O PARA</label>
+            <input
+              type="text"
+              id="rut-socio4"
+              name="rut-socio4"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="cedula-socio4">4-CEDULA SOCIO O PARA</label>
+            <input
+              type="text"
+              id="cedula-socio4"
+              name="cedula-socio4"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="domicilio-socio4">4-DOMICILIO SOCIO</label>
+            <input
+              type="text"
+              id="domicilio-socio4"
+              name="domicilio-socio4"
+              placeholder="N/A"
+            />
+          </div>
+          <div class="form-group hidden">
+            <label for="comuna-socio4">4-COMUNA</label>
+            <input type="text" id="comuna-socio4" name="comuna-socio4" />
+          </div>
+
+          <div class="form-group hidden">
+            <label for="validador">VALIDADOR</label>
+            <input type="text" id="validador" name="validador" />
+          </div>
+          <div class="form-group">
+            <button type="submit">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    </div>
+    <br />
+    <input type="button" value="Guardar" onclick="saveData()" />
+    <input type="button" value="Limpiar" onclick="clearForm()" />
+    <hr />
+    <input type="text" id="rutSearch" placeholder="Buscar por RUT" />
+    <input type="button" value="Buscar" onclick="searchData()" />
+    <div id="searchResults"></div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
